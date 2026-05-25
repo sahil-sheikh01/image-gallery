@@ -11,7 +11,9 @@ rightAngle.addEventListener("click", function(){
     let maxScroll = gallery.scrollWidth - gallery.clientWidth;
 
     if(gallery.scrollLeft >= maxScroll - 5){
+        gallery.computedStyleMap.scrollBehavior = "auto";
         gallery.scrollLeft = 0;
+        gallery.computedStyleMap.scrollBehavior = "smooth";
     }else{
         let imageWidth = gallery.querySelector("div").offsetWidth;
         gallery.scrollLeft += imageWidth + 20;
@@ -22,7 +24,9 @@ leftAngle.addEventListener("click", function(){
     let maxScroll = gallery.scrollWidth - gallery.clientWidth;
 
     if(gallery.scrollLeft <= 0){
+        gallery.style.scrollBehavior = "auto";
         gallery.scrollLeft = maxScroll;
+        gallery.computedStyleMap.scrollBehavior = "smooth";
     }else{
         let imageWidth = gallery.querySelector("div").offsetWidth;
         gallery.scrollLeft -= imageWidth + 20;
