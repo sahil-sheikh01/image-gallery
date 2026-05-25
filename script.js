@@ -10,7 +10,7 @@ gallery.addEventListener("wheel", function(event){
 rightAngle.addEventListener("click", function(){
     let maxScroll = gallery.scrollWidth - gallery.clientWidth;
 
-    if(gallery.scrollLeft >= maxScroll){
+    if(gallery.scrollLeft >= maxScroll - 5){
         gallery.scrollLeft = 0;
     }else{
         let imageWidth = gallery.querySelector("div").offsetWidth;
